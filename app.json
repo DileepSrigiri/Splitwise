@@ -1,0 +1,12 @@
+{
+  "name": "Splitwise",
+  "displayName": "Splitwise",
+  "expo": {
+    "name": "Splitwise",
+    "slug": "Splitwise",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
