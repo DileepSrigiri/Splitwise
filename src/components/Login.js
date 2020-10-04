@@ -22,26 +22,26 @@ const Login = ({ navigation }) => {
 
 
     const isAValidUser = ()=> {
+        var i;
         for(i=0;i<usersData.Users.length;i++) {
             if(usersData.Users[i].email == data.email && usersData.Users[i].password == data.password) {
-                navigation.navigate('Profile', {name:data.email})
+                navigation.navigate('Profile', {name:data.email});
             }
         }
-        navigation.navigate('Profile', {name: data.email})
     }
     return (
         <View >
             <TextInput
                 placeholder="Email..."
                 placeholderTextColor="#003f5c"
-                onChangeText={text => setData({ email: text })}
+                onChangeText={text => setData({ email: text, password:data.password })}
                 value = {data.email} />
 
             <TextInput
                 placeholder="Password..."
                 placeholderTextColor="#003f5c"
                 secureTextEntry
-                onChangeText={text => setData({ password: text })}
+                onChangeText={text => setData({email:data.email, password: text })}
                 value = {data.password} />
 
             <TouchableOpacity>
